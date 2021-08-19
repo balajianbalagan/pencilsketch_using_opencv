@@ -1,0 +1,40 @@
+
+
+{% extends 'base.html' %}{% block content %}  
+
+
+<!-- bodypart -->
+<div class="container mx-auto py-5 text-center">
+
+ 
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <h1>Before</h1>
+        <img src="static/process/file.jpg" width="500">
+      </div>
+      <div class="col-sm-6">
+        <h1>After</h1>
+        <img src="static/process/filep.jpg" width="500">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <form class="text-center m-4" action="{{url_for('save')}}">
+                <input type="submit" value="Save" class="btn-sm btn-success">
+            </form>
+        </div>
+        <div class="col-sm-6">
+    <form class="text-center m-4" action="/">
+        <input type="submit" value="Discard" class="btn-sm btn-danger">
+    </form>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

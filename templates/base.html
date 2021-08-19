@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Pencil Sketch using Py</title>
+
+
+  <!-- bootstrap -->
+  <!-- bootstrap cdn -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <!-- favicon -->
+  <link rel="icon" href="">
+
+  <!-- jquer -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+  <!-- ajax -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Tourney&display=swap" rel="stylesheet">
+
+
+
+
+  <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.0/css/font-awesome.css" integrity="sha512-72McA95q/YhjwmWFMGe8RI3aZIMCTJWPBbV8iQY3jy1z9+bi6+jHnERuNrDPo/WGYEzzNs4WdHNyyEr/yXJ9pA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" integrity="sha512-Cv93isQdFwaKBV+Z4X8kaVBYWHST58Xb/jVOcV9aRsGSArZsgAnFIhMpDoMDcFNoUtday1hdjn0nGp3+KZyyFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- favicon -->
+  <link rel="icon" href="static/assets/icon.ico">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<style>
+  .embed-responsive .card-img-top {
+    object-fit: cover;
+}
+.card-img-top {
+    width: 100%;
+}
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  overflow:hidden;
+  padding-bottom:250px; /* this needs to be bigger than footer height*/
+}
+
+.footer {
+  position: relative;
+  margin-top: -50px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
+  width: 100%;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.zoom{
+  transition: transform .2s;
+  margin: 0 auto;
+  width: 400px;
+  height: 400px;
+}
+.zoom:hover {
+  transform:scale(1.5);
+}
+</style>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-xl g navbar-dark nav-pills " style="color: #ffffff ;background-color: #ff0066;font-size:1.1rem;">
+    <a class="navbar-brand" href="index.php">👨‍🎓 Balaji Anbalagan</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul style="color:#000000;background-color: black;border-radius:20px;padding:3px 10px;" class="nav navbar-nav ml-auto ">
+        <li class="nav-item">
+          <a class="nav-link" href="/" ><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/mysketches"><i class="fa fa-bookmark" aria-hidden="true"></i>My Sketches</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about"><i class="fa fa-info" aria-hidden="true"></i>AboutUs</a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div id="wrap">
+    <div id="main" class="container clear-top">
+  
+
+{% block content %}
+
+{% endblock %}
+
+</div>
+</div>
+<footer class="footer">
+
+  <div class="container" style="display:flex;justify-content:space-between;text-align: center;align-items: center;">
+      <h5 class="text-muted">Made by Balaji Anbalagan </h5>
+      <img src="static/assets/mylogo.png" height="100px">
+  </div>
+
+</footer>
+
+  </body>
+</html>

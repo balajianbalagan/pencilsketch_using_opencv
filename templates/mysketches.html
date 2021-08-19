@@ -1,0 +1,59 @@
+
+{% extends 'base.html' %}{% block content %}  
+
+
+<!-- bodypart -->
+<div class="container mx-auto py-5 text-center">
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Gallery</h1>
+            </div>
+            <hr>
+
+<!--     
+        {% for imagelist in imagelist %}
+        <div class="col-lg-3 col-md-4 col-6">
+          <a href="static/{{imagelist}}" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="{{url_for('static',filename=imagelist)}}" alt="" style='border:5px double black'>
+          </a>
+        </div>
+        {% endfor %}
+     -->
+        <div class="container-fluid">
+          <div class="row">
+
+
+            {% for imagelist in imagelist %}
+            <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-12 p-2 ">
+
+             <div class="embed-responsive embed-responsive-16by9 ">
+                  <a href="static/{{imagelist}}"><img class="card-img-top embed-responsive-item zoom" src="{{url_for('static',filename=imagelist)}}" alt="Sample Title" style="border:5px double black;"></a>
+                 
+                </div>
+                <div class="card-body">
+                  <div style="display:flex;flex-direction:row;justify-content: space-evenly;text-align: center;align-items: center;">
+                    <form action="/mysketches/delete/static/{{imagelist}}" method="get">
+                      <input class="btn-sm btn-danger" value="Delete" type="submit" name="static/{{imagelist}}">
+                    </form>
+                  
+                  
+                  
+                  <a href="static/{{imagelist}}" class="btn-sm btn-success" download>Download</a>
+                  </div>
+                </div>
+              </div>
+            
+            {% endfor %}
+
+            </div>
+        </div>
+
+</div>
+</div>
+</div>
+
+
+{% endblock %}
